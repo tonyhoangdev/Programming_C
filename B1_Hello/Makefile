@@ -11,8 +11,8 @@ SOURCEDIR+=src/
 OBJECTDIR:=obj/
 
 ## Toolchain executables ##
-CC:=gcc.exe
-CCSIZE:=size.exe
+CC:=gcc
+CCSIZE:=size
 
 ## Toolchain flags ##
 CFLAGS:= -g -O0
