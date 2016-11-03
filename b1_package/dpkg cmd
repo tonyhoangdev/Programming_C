@@ -1,0 +1,8 @@
+1. need to files
+- DEBIAN/control
+- path need to setup
+2. cmd to build deb file
+dpkg-deb --build <name_pakage>.deb
+3. cmd to install deb file
+dpkg -i <name_pakage>.deb
+

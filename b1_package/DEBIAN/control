@@ -1,0 +1,10 @@
+Package: b1-hello-minh
+Version: 1.0-1
+Section: base
+Priority: optional
+Architecture: amd64
+Depends:
+Maintainer: MinhHT3 <minhht3@gmail.com>
+Description: Hello world
+ Programming is like sex. One mistake and you have to support it for the rest of your life.
+
