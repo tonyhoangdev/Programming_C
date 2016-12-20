@@ -2,7 +2,7 @@
 VPATH=$(SOURCEDIR)
 
 ## Define CSOURCES
-CSOURCES:=main.c
+CSOURCES:=main.c process.c crc_lib.c
 
 ## Define SOURCEDIR
 SOURCEDIR:=inc/
@@ -16,7 +16,8 @@ CCSIZE:=size
 
 ## Toolchain flags ##
 CFLAGS:= -g -O0
-CFLAGS+= -Wall -std=c99 -Wextra -Werror
+CFLAGS+= -Wall -std=c99 -Wextra 
+#-Werror
 
 ## Execute file ##
 EXECUTABLE=CRC_calculation.exe
