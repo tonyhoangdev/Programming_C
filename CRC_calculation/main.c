@@ -14,7 +14,7 @@ int main()
     uint32_t b = crc_16bit(0, POLY_CRC_16, &data[1], 4U);
     uint32_t c = crc_16bit(0, POLY_XMODEM_16, &data[1], 4U);
     uint32_t a = crc_16bit(SEED_CCITT_16, POLY_CCITT_16, &data[1], 4U);
-    uint32_t d = crc_32bit(0x0FF, 0x04C11DB7, &data[1], 4U);
+    uint32_t d = crc_32bit(0xFFFFFFFF, 0x04C11DB7, &data[1], 4U);
     uint32_t e = crc_16bit_LSB(0, 0x8408, &data[1], 4U);
     uint32_t f = crc_16bit(0, 0x8bb7, data2, 2);
 
@@ -24,13 +24,13 @@ int main()
     crc_config(CRC_BITS_16, 0, POLY_CCITT_16, 1, 1, 0);
     uint32_t crc16Ker = crc_calculation(0x3132);
 
-    crc_config(CRC_BITS_32, 0x0FF, 0x04C11DB7, 0, 0, 0);
+    crc_config(CRC_BITS_32, 0xFFFFFFFF, 0x04C11DB7, 1, 2, 0xFFFFFFFF);
     uint32_t crc32 = crc_calculation(0x31323334);
 
     printf("CRC-8        : 0x%x\n", a8);
     printf("CRC-16       : 0x%x\n", b);
     printf("CRC-XMODEM-16: 0x%x\n", c);
-    printf("CRC-CITT-16  : 0x%x\n", a);
+    printf("CRC-CCITT-16 : 0x%x\n", a);
     printf("CRC-KERMIT-16: 0x%x\n", crc16Ker);
     printf("CRC-32       : 0x%x\n", d);
     printf("CRC-16-LSB   : 0x%x\n", e);

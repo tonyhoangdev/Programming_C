@@ -1,6 +1,5 @@
 #include "process.h"
 
-
 uint8_t swapBitInByteU8(uint8_t num_input)
 {
     uint8_t i,result=0;

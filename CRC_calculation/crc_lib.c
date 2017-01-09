@@ -1,6 +1,5 @@
 #include "crc_lib.h"
 
-
 /* cal */
 uint32_t g_data = 0; /* seed or data */
 uint32_t g_dataCal = 0; /* seed or data */
@@ -15,7 +14,6 @@ uint8_t g_writeTranspose = false;
 uint8_t g_readTranspose = false;
 bool g_dataAsSeed = 0;          /* 0: data,    1: seed */
 uint32_t g_xorOut = 0;
-
 
 uint16_t crc_16bit(uint16_t seed,
                    uint32_t polinomial,
